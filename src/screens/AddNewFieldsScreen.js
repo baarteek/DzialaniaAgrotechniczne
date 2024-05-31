@@ -1,21 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import styles from '../style/Styles';
 
 const AddNewFieldsScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>AddNewFieldsScreen</Text>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Dodaj ręcznie nowe pole</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Importuj pola z pliku</Text>
+      </TouchableOpacity>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default AddNewFieldsScreen;
